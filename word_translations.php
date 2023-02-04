@@ -35,7 +35,7 @@ foreach ($idLanguage as $language) {
                     $idAyat = $data->id;
                     $text = addslashes($itemWord->translation->text);
 
-                    $sql = "INSERT INTO `word_translations`(`text`, `id_word_verse`, `id_language`) VALUES ('$text','$idVerse', '$idLanguage');";
+                    $sql = "INSERT INTO `word_translations`(`text`, `id_word_verse`, `id_language`) VALUES ('$text','$idAyat', '$idLanguage');";
 //                    echo $sql . "</br>";
                     $conn->exec($sql);
                 }
