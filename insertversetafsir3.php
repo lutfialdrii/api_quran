@@ -10,7 +10,7 @@ $sth = $conn->prepare(
 
 // By setting the header offset we index all records
 // with the header record and remove it from the iteration
-$csv = Reader::createFromPath('data/data.csv')
+$csv = Reader::createFromPath('data/data1.csv')
     ->setHeaderOffset(0)
 ;
 

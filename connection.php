@@ -1,7 +1,7 @@
 <?php
 
 $servername = "localhost";
-$database = "tafsir_app";
+$database = "quran";
 $username = "root";
 $password = "";
 

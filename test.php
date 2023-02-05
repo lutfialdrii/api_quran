@@ -1,16 +1,10 @@
 <?php
-require "connection.php";
+require 'connection.php';
 
-//$sql = "SELECT id FROM ayat WHERE nomor = 1";
-//try{
-//    $stmt = $conn -> prepare("SELECT id FROM ayat WHERE nomor = 7 AND id_surah = 1");
-//    $stmt->execute();
-//    $data = $stmt->fetchAll();
-//    var_dump($data);
-//} catch (PDOException $e){
-//    echo "$sql ERRRRRRROORRRRR $e";
-//}
+// array kosong
+$idTranslate = [17,19,20,22,23,25,26,27,28,29,30,31,32,33,35,36,37,38,39,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,74,75,76,77,78,79,80,81,83,84,85,86,87,88,89,95,97,101,103,106,108,109,111,112,113,115,118,120,122,124,125,126,127,128,131,133,134,135,136,139,140,141,143,144,149,151,153,156,158,161,162,163,167,171,172,173,174,175,176,177,178,179,180,181,182,183,199,203,206,207,208,209,210,211,213,214,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,771,774,776,779,782,785,790,791,792,795,796,798,819,823];
 
-$string = "'al'alamin'";
-
-//$sql = "INSERT INTO kata_ayat (text, nomor, terjemahan, audio, id_ayat) VALUES ('(al'alamin)', '$nomorKata', '$translate_ayat', 'https://verses.quran.com/$audio_url', '$idAyat')";
+foreach ($idTranslate as $item) {
+    $sql = "SELECT COUNT(id_translation) FROM `verse_translations` WHERE id_translation = $item;";
+    echo $sql. "</br>";
+}
